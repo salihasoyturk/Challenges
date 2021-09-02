@@ -1,0 +1,53 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 10%;
+    background-color: #606368;
+}
+
+.body {
+    height: 70%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.body-side {
+    background-color: #353535;
+    overflow-y: auto;
+    min-width: 250px;
+}
+
+.body-main {
+    background-color: #3c4042;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.footer {
+    height: 20%;
+    width: 100%;
+    background-color: #202124;
+    display: flex;
+    overflow-x: auto;
+}
+
+.card {
+    margin: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+img {
+    min-height: 100%;
+}
+.footer-img {
+    width: fit-content;
+    height: 100%;
+}
