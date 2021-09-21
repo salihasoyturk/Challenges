@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./select.css">
+    <link rel="stylesheet" href="./checkbox.css">
+    <link rel="stylesheet" href="./radio.css">
+    <link rel="stylesheet" href="/homework.css">
+    <script>
+        function selectCicek() {
+            console.log('click');
+        }
+        function selectBocek() {
+            console.log('click');
+        }
+
+
+    </script>
+    <title>Challenge 2</title>
+</head>
+
+<body>
+    <div class="body">
+
+        <div class="select-list">
+            <div id="cicek" class="select" tabindex="0"><span>Çiçek Seçiniz</span>
+                <ul id="options" class="options" onclick="selectCicek()">
+                    <li>Çiçek Seçiniz</li>
+                    <li>Lale</li>
+                    <li>Gül</li>
+                    <li>Fil</li>
+                </ul>
+            </div>
+            <div id="bocek" class="select" tabindex="0"><span>Böcek Seçiniz</span>
+                <ul class="options" onclick="selectBocek()">
+                    <li>Böcek Seçiniz</li>
+                    <li>Karınca</li>
+                    <li>Sinek</li>
+                    <li>Sivri</li>
+                    <li>Fil</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="radio">
+            <label class="switch">
+                <input type="checkbox" />
+                <span class="filter-name">Okudum,onayliyorum.</span>
+            </label>
+        </div>
+
+        <div class="checkbox">
+            <input type="radio" name="renk" value="yesil">
+            <span class="radio-circle" style="color: green;"></span>
+        </div>
+    </div>
+
+</body>
+
+</html>

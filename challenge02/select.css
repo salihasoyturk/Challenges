@@ -1,0 +1,35 @@
+.select {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  width: 150px;
+  height: 50px;
+  border: 1px solid black;
+  font-weight: bold;
+  /* flex-direction: column; */
+  /* position: relative; */
+}
+#cicek > .options {
+  display: none;
+}
+#cicek:focus > .options {
+  display: block;
+  /* flex-direction: column;
+  align-items: flex-start;
+  position: relative; */
+}
+#bocek > .options {
+  display: none;
+}
+#bocek:focus > .options {
+  display: block;
+}
+ul {
+  list-style-type: none;
+}
+ul > li {
+  width: 150px;
+  height: 35px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
