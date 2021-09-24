@@ -1,63 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./select.css">
-    <link rel="stylesheet" href="./checkbox.css">
-    <link rel="stylesheet" href="./radio.css">
-    <link rel="stylesheet" href="/homework.css">
-    <script>
-        function selectCicek() {
-            console.log('click');
-        }
-        function selectBocek() {
-            console.log('click');
-        }
-
-
-    </script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./select.css" />
+    <link rel="stylesheet" href="./checkbox.css" />
+    <link rel="stylesheet" href="./radio.css" />
+    <link rel="stylesheet" href="/homework.css" />
     <title>Challenge 2</title>
-</head>
+    <script>
+      function selectCicek(event) {
+        let cicek = document.getElementById("cicek-sec");
+        let ul = document.getElementById("options");
+        cicek.innerHTML = event.target.innerHTML;
+      }
+      function selectBocek(event) {
+        let bocek = document.getElementById("bocek-sec");
+        let ul = document.getElementById("options");
+        bocek.innerHTML = event.target.innerHTML;
+      }
+    </script>
+  </head>
 
-<body>
+  <body>
     <div class="body">
-
-        <div class="select-list">
-            <div id="cicek" class="select" tabindex="0"><span>Çiçek Seçiniz</span>
-                <ul id="options" class="options" onclick="selectCicek()">
-                    <li>Çiçek Seçiniz</li>
-                    <li>Lale</li>
-                    <li>Gül</li>
-                    <li>Fil</li>
-                </ul>
-            </div>
-            <div id="bocek" class="select" tabindex="0"><span>Böcek Seçiniz</span>
-                <ul class="options" onclick="selectBocek()">
-                    <li>Böcek Seçiniz</li>
-                    <li>Karınca</li>
-                    <li>Sinek</li>
-                    <li>Sivri</li>
-                    <li>Fil</li>
-                </ul>
-            </div>
+      <div class="select-list">
+        <div id="cicek" class="select" tabindex="0">
+          <span id="cicek-sec">Çiçek Seçiniz</span>
+          <ul id="options" class="options" onclick="selectCicek(event)">
+            <li id="a">Çiçek Seçiniz</li>
+            <li id="b">Lale</li>
+            <li id="c">Gül</li>
+            <li id="d">Papatya</li>
+          </ul>
         </div>
-
-        <div class="radio">
-            <label class="switch">
-                <input type="checkbox" />
-                <span class="filter-name">Okudum,onayliyorum.</span>
-            </label>
+        <div id="bocek" class="select" tabindex="0">
+          <span id="bocek-sec">Böcek Seçiniz</span>
+          <ul id="options" class="options" onclick="selectBocek(event)">
+            <li>Böcek Seçiniz</li>
+            <li>Karınca</li>
+            <li>Sinek</li>
+            <li>Sivri</li>
+            <li>Fil</li>
+          </ul>
         </div>
+      </div>
+      <div class="checkbox-list">
+        <label class="switch">
+          <div class="text">Okudum, onayliyorum.</div>
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
 
-        <div class="checkbox">
-            <input type="radio" name="renk" value="yesil">
-            <span class="radio-circle" style="color: green;"></span>
+      <div class="radio-list">
+        <div class="header">
+          <span>RENK SEÇİNİZ</span>
         </div>
+        <div class="buttons">
+          <label class="rad-label">
+            <input type="radio" class="rad-input" name="rad" value="green" />
+            <span class="rad-design" style="color: green"></span>
+          </label>
+          <label class="rad-label">
+            <input type="radio" class="rad-input" name="rad" value="purple" />
+            <span class="rad-design" style="color: purple"></span>
+          </label>
+          <label class="rad-label">
+            <input type="radio" class="rad-input" name="rad" value="red" />
+            <span class="rad-design" style="color: red"></span>
+          </label>
+          <label class="rad-label">
+            <input type="radio" class="rad-input" name="rad" value="black" />
+            <span class="rad-design" style="color: black"></span>
+          </label>
+        </div>
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>

@@ -1,0 +1,65 @@
+.buttons {
+  display: flex;
+}
+.header {
+  margin-bottom: 20px;
+}
+
+.rad-label {
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  padding: 8px 8px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.rad-label::before {
+  background-color: red;
+}
+
+.rad-label:hover {
+  background: rgb(255, 255, 255);
+  border: 2px solid rgba(88, 0, 128, 0.5);
+}
+.rad-label:focus-within {
+  background: rgb(255, 255, 255);
+  border: 2px solid rgba(88, 0, 128, 1);
+}
+
+.rad-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+  background-color: red;
+}
+
+/*  butona basildiktan sonra icindeki yuvarlagin aldigi renk */
+.rad-design {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: purple;
+  position: relative;
+}
+
+/*  butona basilmadan once icindeki yuvarlagin aldigi renk */
+.rad-design::before {
+  content: "";
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background-color: purple;
+  transform: scale(1.1);
+  transition: 0.3s;
+  border: none;
+}
+
+.rad-input:checked + .rad-design::before {
+  transform: scale(0);
+}

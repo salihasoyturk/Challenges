@@ -1,40 +1,29 @@
 html,
 body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-.body{
-    height: 100%;
-    display: grid;
-    grid-template-rows: 40% 20% 40%; 
+.body {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 40% 20% 40%;
 }
-.select-list{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: aquamarine;
+.select-list {
+  display: flex;
+  justify-content: center;
 }
-.radio{
-    background-color: bisque;
+.checkbox-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.checkbox{
-    background-color: coral;
+.radio-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* html,
 body {
